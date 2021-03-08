@@ -1,3 +1,5 @@
+@import url('normalize.css');
+
 *,
 *::before,
 *::after {
@@ -130,13 +132,18 @@ p {
 .card {
   max-width: 350px;
   background-color: #f2f2f2;
-  text-align: center;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .card__body {
-  padding: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__body .btn {
+  align-self: center;
 }
 
 .card__heading {
@@ -152,3 +159,45 @@ p {
 .card--accent .card__heading {
   color: var(--color-accent);
 }
+
+/* Flex */
+/* .flex {
+  display: flex;
+}
+
+.flex__self-center {
+  align-self: center;
+}
+
+.flex--direction-col {
+  flex-direction: column;
+} */
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid--1x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--1x3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* temp */
+/* .box {
+  height: 200px;
+}
+
+.box1 {
+  background-color: var(--color-primary);
+}
+.box2 {
+  background-color: var(--color-secondary);
+}
+.box3 {
+  background-color: var(--color-accent);
+} */
