@@ -52,6 +52,12 @@ p {
   margin: 0;
 }
 
+/* Container */
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
 /* list */
 .list {
   list-style: none;
@@ -150,13 +156,19 @@ p {
 }
 
 .card--large .card__heading {
-  margin-bottom: 2.5rem;
+  /* margin-bottom: 2.5rem; */
   font-size: 3rem;
 }
 
 .card--large .card__body {
   align-items: center;
   padding: 1rem 3rem;
+}
+
+.card--large .btn {
+  padding: 1.3rem 3rem;
+  font-size: 2.2rem;
+  font-weight: 500;
 }
 
 .card--primary .card__heading {
@@ -191,9 +203,7 @@ p {
   display: grid;
   gap: 2rem;
   justify-content: center;
-  align-content: center;
   justify-items: center;
-  align-items: center;
   margin: auto;
 }
 
@@ -215,8 +225,8 @@ p {
   outline: 0;
   border-radius: 5px;
   display: block;
-  margin: 2rem 0;
-  background-color: #eee3;
+  margin: 2rem 0 0;
+  background-color: #fff8;
 }
 
 .form-control:focus {
@@ -224,7 +234,7 @@ p {
 }
 
 .form-control::placeholder {
-  color: #333;
+  color: #222;
 }
 
 /* Link */
@@ -275,10 +285,17 @@ p {
 }
 
 /* Block */
+
+.block {
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
 .block__heading {
   color: #fff;
   text-shadow: 2px 2px #333;
   font-size: 3.6rem;
+  text-align: center;
 }
 
 /* Hero Block */
@@ -290,6 +307,7 @@ p {
   height: 70vh;
   width: 100%;
   display: flex;
+  padding: 0;
 }
 
 .hero__header {
@@ -339,6 +357,7 @@ p {
 }
 
 .collapsible__toggler {
+  cursor: pointer;
   width: 45px;
   height: 40px;
   background-color: #333;
@@ -421,5 +440,108 @@ p {
 @media screen and (min-width: 1024px) {
   .block-about .grid--1x3 {
     width: 1000px;
+  }
+}
+
+/* block Services  */
+
+.block-services {
+  background-image: url(../img/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 4rem;
+  /* background-position: 100% 50%; */
+}
+
+.block-services .block__content {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* Block Testimonial */
+.testimonial__sect {
+  margin-bottom: 3rem;
+}
+.testimonial__sect-01 .card {
+  width: 230px;
+  text-align: center;
+}
+
+.testimonial__sect-01 .card__body {
+  align-items: center;
+}
+
+.testimonial__sect-02 .card__body {
+  align-items: flex-start;
+}
+
+.testimonial__sect-02 .card__body .btn {
+  align-self: flex-start;
+}
+
+.testimonial__sect-02 .card__img {
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 520px) {
+  .testimonial__sect-01 .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial__sect-02 .card__img {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonial__sect-01 .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* block Form */
+.block-form {
+  padding: 0;
+  background-image: url(../img/bg-3.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.block-form .form-control {
+  width: 100%;
+}
+
+.form-container {
+  width: 95%;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.form__instruction {
+  padding: 1.5rem 3rem;
+  text-align: center;
+  color: #222;
+}
+
+.form .grid {
+  justify-content: initial;
+  justify-items: initial;
+  gap: 0;
+}
+
+.form .grid__group {
+  /* width: 100%; */
+}
+
+@media screen and (min-width: 768px) {
+  .form .grid {
+    gap: 2rem;
+    align-content: initial;
+    align-items: initial;
   }
 }
